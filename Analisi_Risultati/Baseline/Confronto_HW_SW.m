@@ -2,7 +2,7 @@
 golden_model = load('sigmoid_outputs_sw.txt');
 
 % Carica i valori HEX di Vivado
-hex_data = textread('risultati_HW.hex', '%s'); 
+hex_data = textread('risultati_HW_256.hex', '%s'); 
 
 % Conversione e Sincronizzazione
 n = min(length(golden_model), length(hex_data));
