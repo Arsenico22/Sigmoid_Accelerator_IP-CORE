@@ -50,7 +50,7 @@ begin
 
                 -- II stadio pipeline: clipping e slicing
                 if abs_val >= CLIP_VAL then
-                    clipped := to_unsigned(16384,16);
+                    clipped := to_unsigned(16383,16);
                 else
                     clipped := unsigned(abs_val(15 downto 0));
                 end if;
