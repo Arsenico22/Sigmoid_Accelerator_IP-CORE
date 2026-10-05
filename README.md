@@ -50,13 +50,9 @@ The hardware accelerator was benchmarked against a modern multi-core, multi-thre
 ## 📁 Repository Structure
 
 ```text
-├── src/
-│   ├── Baseline/      # VHDL source files & testbenches (Distributed RAM implementation)
-│   ├── V2/            # VHDL source files & testbenches (BRAM & Clipping logic)
-│   └── V3/            # VHDL source files for V3 (Q1.15 format, Symmetry, Pipelining & Multi-Core)
-├── constraints/       # Xilinx Design Constraints (.xdc) for target FPGA boards
-├── data/              # Testbench stimulus vectors and BRAM memory initialization files (.mem)
-├── scripts/
-│   ├── python/        # Fixed-point quantization, LUT generation, Golden Model & error plotting
-│   └── matlab/        # Performance comparison scripts & analytical plots
-└── docs/              # Synthesis reports, floorplanning diagrams, and technical documentation
+├── vhd_files/          # VHDL source code & simulation testbenches for all architecture releases (Baseline, V2, V3)
+├── mem_files/          # BRAM memory initialization files (.mem) and lookup table stimulus vectors
+├── xdc/                # Xilinx Design Constraints (.xdc) specifying timing requirements
+├── Pre_processing/     # Python scripts for dataset formatting, quantization, and LUT initialization
+├── Post_processing/    # Validation scripts for numerical error evaluation and output verification
+└── Results_analysis/   # MATLAB scripts for HW vs Golden Model numerical accuracy and FPGA vs CPU execution benchmarks
